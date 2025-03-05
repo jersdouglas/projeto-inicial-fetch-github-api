@@ -23,6 +23,20 @@ main {
   flex-direction: column;
   padding: 50px 0 0;      
 }
+li.repositorio:hover{
+  background-color: hotpink;
+  color: #fff;
+  border: 1px solid hotpink;
+}
+.border{
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.border:hover{
+  cursor: default;
+}
 
 .devicon-github-original{
   font-size: 60px;
