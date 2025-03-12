@@ -1,6 +1,6 @@
 const screen = {
     userProfile: document.querySelector('.profile-data'),
-    renderUser(user){
+    renderUser(user) {
         this.userProfile.innerHTML = `<div class="info">
                                         <img src="${user.avatarUrl}" alt="Foto do Usuario" />
                                             <div class="data">
@@ -8,7 +8,7 @@ const screen = {
                                                 <p>${user.bio ?? 'Não possui bio cadastrada 😒'}</p>
                                             </div>
                                         </div>`
-                                        
+
         let repositoriesItens = ''
         user.repositories.forEach(repo =>
             repositoriesItens += `<li>
@@ -16,12 +16,15 @@ const screen = {
                                     ${repo.name}
                                     </a>
                                 </li>`)
-            if(user.repositories.length > 0){
-                this.userProfile.innerHTML += `<div class="repositories section"
+        if (user.repositories.length > 0) {
+            this.userProfile.innerHTML += `<div class="repositories section"
                                                 <h3>Repositórios:</h3>
                                                 <ul>${repositoriesItens}</ul>
                                                 </div>`
-            }
+        }
+    },
+    renderNotFound(){
+        this.userProfile.innerHTML = "<h3>Usuário não Encontrado</h3>"
     }
 }
 
