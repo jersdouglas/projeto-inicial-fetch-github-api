@@ -1,5 +1,7 @@
 import { getUser } from './services/users.js'
 import { getRepositories } from './services/repositories.js'
+import { getFollowing } from './services/following.js'
+import { getFollowers } from './services/followers.js'
 import { user } from './objects/user.js'
 import { screen } from './objects/screen.js'
 document.getElementById('btn-search').addEventListener('click', () => {
